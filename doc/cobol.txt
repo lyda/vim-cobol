@@ -1,0 +1,31 @@
+cobol.txt*  Utility programs for COBOL programming.
+
+Author:  Kevin Lyda <kevin@phrye.com>
+License: GPL
+
+INTRODUCTION                                    *cobol*
+
+Whenever you edit a file of filetype cobol, these commands are available to
+help some common tasks.
+
+COMMANDS                                        *cobol-commands*
+
+Utility functions which work on the entire source file.
+
+                                                *cobol-:Renumber*
+:Renumber               Add any missing line numbers in columns 1-6.
+                        Will catch and fix any numbers following a gap
+                        that are out of order (or that would be after
+                        renumbering.
+
+                                                cobol-:Unnumber
+:Unnumber               Remove all numbers in columns 1-6; replace with
+                        spaces.
+
+ABOUT                                           *cobol-about*
+
+Grab the latest version or report a bug on GitHub:
+
+http://github.com/lyda/vim-cobol
+
+ vim:tw=78:et:ft=help:norl:
