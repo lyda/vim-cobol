@@ -16,6 +16,15 @@ endif
 
 let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
-function! HelloWorld()
+function! LoadCobolPython()
+  !exists('g:cobol_py_loaded')
+    exec 'py3file ' . s:path . '/cobol.py'
+    let g:cobol_py_loaded = 1
+  endif
+endfunction
+
+function! Renumber()
   exec 'py3file ' . s:path . '/renumber.py'
 endfunction
+
+" call LoadCobolPython()
