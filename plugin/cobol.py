@@ -45,7 +45,7 @@ def cobol_Renumber():
         lines[j] = ('%06d' % new_line_no) + lines[j][6:]
         new_line_no += delta
   else:
-    print('Not a COBOL file. This is a %s file' %
+    print('Not a COBOL file. This is a %s file.' %
         vim.current.buffer.options['filetype'].decode('UTF-8'))
 
 def cobol_Unnumber():
@@ -55,5 +55,5 @@ def cobol_Unnumber():
       if lines[i][:6].isdigit():
         lines[i] = '      ' + lines[i][6:]
   else:
-    print('Not a COBOL file. This is a %s file' %
+    print('Not a COBOL file. This is a %s file.' %
         vim.current.buffer.options['filetype'].decode('UTF-8'))
