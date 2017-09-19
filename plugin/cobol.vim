@@ -28,3 +28,4 @@ function! Renumber()
 endfunction
 
 " call LoadCobolPython()
+command! -nargs=0 Renumber call Renumber()
