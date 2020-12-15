@@ -14,7 +14,7 @@ import vim
 import math
 
 def cobol_Renumber():
-  if vim.current.buffer.options['filetype'] == b'cobol':
+  if vim.current.buffer.options['filetype'] == 'cobol':
     gap = {}
     last_line_no = 0
     lines = vim.current.buffer
@@ -49,7 +49,7 @@ def cobol_Renumber():
         vim.current.buffer.options['filetype'].decode('UTF-8'))
 
 def cobol_Unnumber():
-  if vim.current.buffer.options['filetype'] == b'cobol':
+  if vim.current.buffer.options['filetype'] == 'cobol':
     lines = vim.current.buffer
     for i in range(len(lines)):
       if lines[i][:6].isdigit():
